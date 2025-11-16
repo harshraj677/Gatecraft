@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GateCraft: Interactive Logic Gate & Digital Logic Simulator</title>
+  
+  <meta name="description" content="Explore and learn digital logic with GateCraft, an interactive logic gate simulator. Experiment with AND, OR, NOT gates, visualize truth tables, and understand boolean algebra in real-time." />
+  <meta name="keywords" content="logic gate simulator, digital logic, boolean algebra, interactive learning, truth table, AND gate, OR gate, NOT gate, computer science, electronics education" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Import Map for React -->
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+
+  <!-- Custom Styles and Animations -->
+  <style>
+    /* Keyframes for the signal flow animation */
+    @keyframes signal-flow {
+      from {
+        stroke-dashoffset: 0;
+      }
+      to {
+        stroke-dashoffset: 20;
+      }
+    }
+    
+    /* Keyframes for Shimmer Button */
+    @keyframes spin-around {
+      0% {
+        transform: translateZ(0) rotate(0);
+      }
+      15%, 35% {
+        transform: translateZ(0) rotate(90deg);
+      }
+      65%, 85% {
+        transform: translateZ(0) rotate(270deg);
+      }
+      100% {
+        transform: translateZ(0) rotate(360deg);
+      }
+    }
+
+    @keyframes shimmer-slide {
+      to {
+        transform: translate(calc(100cqw - 100%), 0);
+      }
+    }
+
+    /* Animation utility classes */
+    .animate-signal-flow {
+      animation: signal-flow 0.8s linear infinite;
+    }
+    .animate-shimmer-slide {
+      animation: shimmer-slide var(--speed) ease-in-out infinite alternate;
+    }
+    .animate-spin-around {
+      animation: spin-around calc(var(--speed) * 2) infinite linear;
+    }
+  </style>
+
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

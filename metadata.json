@@ -1,0 +1,5 @@
+{
+  "name": "GateCraft",
+  "description": "An interactive logic gate simulator built with React, TypeScript, and Tailwind CSS.",
+  "requestFramePermissions": []
+}
